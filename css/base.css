@@ -1,0 +1,210 @@
+:root{
+    --white-color:white;
+    --green-color:#5e8c65;
+    --nav-height: 44px;
+    --nav-height-no-pc: 64px;
+    --black-color: rgba(0, 0, 0, 0.322);
+    --text-color: #272727BF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+    
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    /* font-family: "Marcellus", Sans-serif; */
+    font-family: '';
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+    line-height: 3.4rem;
+}
+a{
+    text-decoration: none;
+}
+@keyframes goTop{
+    from {
+        top:80px;
+        opacity: 0.5;
+    }
+    to{
+        top:70px;
+        opacity: 1;
+    }
+}
+
+.btn--green{
+    text-decoration: none;
+    font-size: 1.6rem;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    font-weight: 600;
+    padding:12px 24px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 20px;
+    border-top-left-radius:4px ;
+    transition: 0.4s;
+    line-height: 2rem;
+}
+.btn--green:hover{
+    border-radius: 20px;
+    border-bottom-left-radius:4px;
+    background-color: #9f997b;
+
+}
+
+.hide-on-pc{
+    display: none;
+}
+@keyframes showMenu {
+    from{ 
+        transform:scaleY(0);
+        transform-origin: top;
+    }
+    to{
+        transform:scaleY(1);
+        transform-origin: top;
+    }
+}
+
+.go-to-up{ 
+    animation: goUp 2s ease;
+    opacity: 1;
+    
+}
+.go-to-up-delay{ 
+    animation: goUpDelay 2s ease;  
+}
+.go-to-down{
+    animation: goDown 2s ease;
+}
+.go-to-left{
+    animation: goLeft 2s ease;   
+    opacity: 1;
+}
+.go-to-left-delay{
+    animation: goLeftDelay 2.8s ease;   
+    opacity: 1;
+}
+.go-to-right{
+    animation: goRight 2s ease-in-out;
+    opacity: 1;
+}
+.go-to-right-delay{
+    animation: goRightDelay 3s ease;   
+}
+@keyframes goUp{
+    from {
+        opacity: 0;
+        transform: translateY(180px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes goDown{
+    from {
+        opacity: 0;
+        transform: translateY(-180px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes goUpDelay{
+    from {
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes goLeft{
+    from {
+        opacity: 0;
+        transform: translateX(1000px);
+   
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+      
+    }
+}
+
+@keyframes goLeftDelay{
+    from {
+        opacity: 0;
+        transform: translateX(1600px);
+   
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+      
+    }
+}
+@keyframes goRight {
+    from {
+        opacity: 0;
+        transform: translateX(-600px);
+       
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes goRightDelay{
+    from {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes shaking{
+    50%{transform:translateX(3px) rotate(2deg)}
+    100%{transform:translateX(-3px) rotate(-2deg)}
+}
+@keyframes downUp{
+    0%{transform:translateY(-8px)}
+    50%{transform:translateY(-4px)}
+    100%{transform:translateY(-8px)}
+}
+@keyframes zoomInOut{
+    0%{
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+    100%{
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+    }
+}
